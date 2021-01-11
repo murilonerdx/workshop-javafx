@@ -6,7 +6,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
       <VBox prefHeight="399.0" prefWidth="601.0">
          <children>
@@ -14,15 +14,14 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Registrar">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Vendedor" />
-                        <MenuItem mnemonicParsing="false" text="Departamento" />
+                    <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Vendedor" />
+                        <MenuItem fx:id="menuItemDepartament" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Departamento" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
+                <Menu fx:id="menuItemAbout" mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
+                     </items></Menu>
               </menus>
             </MenuBar>
          </children>

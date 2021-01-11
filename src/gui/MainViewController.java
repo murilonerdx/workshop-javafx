@@ -1,7 +1,8 @@
-package Initial;
+package gui;
 
-import Initial.Main;
-import gui.util.Alerts;
+import application.Main;
+import javafx.scene.control.Button;
+import util.Alerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -25,17 +26,25 @@ public class MainViewController implements Initializable {
     private MenuItem menuItemAbout;
 
     @FXML
+    private Button btNew;
+
+    @FXML
     public void onMenuItemSellerAction(){
-        System.out.println();
+        System.out.println("Vendedor");
+    }
+
+    @FXML
+    public void onBtNewAction(){
+        System.out.println("Botão");
     }
 
     @FXML
     public void onMenuItemDepartmentAction(){
-        System.out.println();
+        loadView("/gui/DepartmentList.fxml");
     }
 
     @FXML
-    public void onMenuItemAboutAction(){
+    public void onMenuItemAboutAction() {
         loadView("/gui/About.fxml");
     }
 
