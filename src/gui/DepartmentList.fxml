@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="479.0" text="JavaFX application demo" />
+      <Label alignment="TOP_CENTER" opacity="0.83" prefHeight="326.0" prefWidth="478.0" text="About">
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" />
+         </opaqueInsets>
+         <font>
+            <Font name="Gadugi" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+   </children>
+</VBox>
