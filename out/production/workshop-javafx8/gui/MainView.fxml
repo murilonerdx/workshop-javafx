@@ -6,22 +6,23 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
-      <VBox prefHeight="399.0" prefWidth="601.0">
+      <VBox prefHeight="298.0" prefWidth="468.0">
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="Registrar">
+                <Menu mnemonicParsing="false" text="Registration">
                   <items>
-                    <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Vendedor" />
-                        <MenuItem fx:id="menuItemDepartament" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Departamento" />
+                    <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Seller" />
+                        <MenuItem fx:id="menuItemDepartment" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Department" />
                   </items>
                 </Menu>
-                <Menu fx:id="menuItemAbout" mnemonicParsing="false" text="Help">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
-                     </items></Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
+                  </items>
+                </Menu>
               </menus>
             </MenuBar>
          </children>
