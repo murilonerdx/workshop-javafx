@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="139.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentFormController">
    <children>
-      <GridPane fx:id="labelErrorName" layoutX="33.0" layoutY="32.0" prefHeight="95.0" prefWidth="499.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <GridPane layoutX="33.0" layoutY="32.0" prefHeight="95.0" prefWidth="499.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="63.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="160.0" />
@@ -23,9 +23,9 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="ID" />
-            <Label text="NAME" GridPane.rowIndex="1" />
-            <Label textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Id" />
+            <Label text="Name" GridPane.rowIndex="1" />
+            <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
             <TextField fx:id="txtName" prefHeight="27.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
