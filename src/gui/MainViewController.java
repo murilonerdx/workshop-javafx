@@ -1,9 +1,8 @@
 package gui;
 
 import application.Main;
-import javafx.scene.control.Button;
+import gui.util.Alerts;
 import model.services.DepartmentService;
-import util.Alerts;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

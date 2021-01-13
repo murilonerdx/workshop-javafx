@@ -3,6 +3,7 @@ package gui;
 
 import db.DbException;
 import gui.gui.listeners.DataChangeListener;
+import gui.util.Alerts;
 import gui.util.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,8 +18,9 @@ import java.util.*;
 
 public class DepartmentFormController implements Initializable {
 
+    @FXML
     private Department entity;
-
+    @FXML
     private DepartmentService service;
 
     @FXML
@@ -33,11 +35,10 @@ public class DepartmentFormController implements Initializable {
     @FXML
     private Label labelErrorName;
 
-
-
     @FXML
     private Button btCancel;
 
+    @FXML
     private List<DataChangeListener> dataChangeListeners = new ArrayList<>();
 
     @FXML
@@ -56,7 +57,7 @@ public class DepartmentFormController implements Initializable {
         }catch(ValidationException e){
             setErrorMessager(e.getErrors());
         } catch(DbException e){
-            util.Alerts.showAlert("Error saving obj", null, e.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("Error saving obj", null, e.getMessage(), Alert.AlertType.ERROR);
         }
 
     }
@@ -89,8 +90,8 @@ public class DepartmentFormController implements Initializable {
     }
 
     @FXML
-    public void onBtCancelAction(){
-        System.out.println("Cancelando");
+    public void onBtCancelAction(ActionEvent event){
+        Utils.currentStage(event).close();
     }
 
     @Override
@@ -112,8 +113,6 @@ public class DepartmentFormController implements Initializable {
         }
         txtId.setText(String.valueOf(entity.getId()));
         txtName.setText(entity.getName());
-        System.out.println(entity.getName());
-        System.out.println(entity.getId());
     }
 
     private void initializeNodes(){
